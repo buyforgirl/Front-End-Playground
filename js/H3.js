@@ -15,31 +15,24 @@ var deck = {
                 this.cards.push(card);
                 line.push(card);
             }
-            this.printLine(line);
+            console.log(line.join(', '));
+            console.log('--------------------------------------------------------------------------------');
         }
     },
 
     print : function() {
-        console.log('******************************************************************');
+        console.log('************************************************************************************');
         for (var i = 0; i < this.suit.length; i++) {
             var newFaceValue = this.random(this.faceValue.slice());
             var line = [];
             for (var j = 0; j < newFaceValue.length; j++) {
                 var cardArray = this.cards[newFaceValue[j] - 1 + i * 13].split(' ');
-                var card = cardArray[2] + '-' + cardArray[0];
+                var card = cardArray[2] + ' - ' + cardArray[0];
                 line.push(card);
             }
-            this.printLine(line);
+            console.log(line.join(', '));
+            console.log('--------------------------------------------------------------------------------');
         }
-    },
-
-    printLine : function(line) {
-        var lineToScreen = '';
-        for (var i = 0; i < line.length; i++) {
-            lineToScreen += line[i] + ', ';
-        }
-        console.log(lineToScreen.slice(0, lineToScreen.length - 2));
-        console.log('----------------------------------------------------------------');
     },
 
     random : function(array) {
