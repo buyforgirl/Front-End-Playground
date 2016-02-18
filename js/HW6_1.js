@@ -30,13 +30,20 @@ function Triangle(a, b, c) {
 	this.c = c;
 }
 
-Triangle.prototype = new shape();
-
 Triangle.prototype = {
 	constructor : Triangle,
 	getPerimeter : function() {
 		return this.a + this.b + this.c;
 	}
 }
+
+Triangle.prototype = new shape();
+Triangle.prototype.constructor = Triangle;
+
+var t = new Triangle(1, 2, 3);
+console.log(t.constructor === Triangle);
+console.log(shape.isPrototypeOf(t));
+console.log(t.getPerimeter());
+
 
 
