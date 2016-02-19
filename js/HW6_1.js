@@ -15,7 +15,6 @@
 // 5.	Loop over t showing only own properties and methods (none of the prototype's).
 
 function shape() {
-
 }
 
 shape.prototype = {
@@ -25,25 +24,25 @@ shape.prototype = {
 }
 
 function Triangle(a, b, c) {
+	//shape.call(this);
 	this.a = a;
 	this.b = b;
 	this.c = c;
 }
 
-Triangle.prototype = {
-	constructor : Triangle,
-	getPerimeter : function() {
-		return this.a + this.b + this.c;
-	}
-}
-
 Triangle.prototype = new shape();
 Triangle.prototype.constructor = Triangle;
+Triangle.prototype.getPerimeter = function() {
+		return this.a + this.b + this.c;
+}
+
 
 var t = new Triangle(1, 2, 3);
 console.log(t.constructor === Triangle);
 console.log(shape.isPrototypeOf(t));
 console.log(t.getPerimeter());
+//console.log(t.getType());
+
 
 
 
