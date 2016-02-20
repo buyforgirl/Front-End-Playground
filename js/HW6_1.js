@@ -24,13 +24,13 @@ shape.prototype = {
 }
 
 function Triangle(a, b, c) {
-	//shape.call(this);
+	shape.call(this);
 	this.a = a;
 	this.b = b;
 	this.c = c;
 }
 
-Triangle.prototype = new shape();
+Triangle.prototype = Object.create(shape.prototype);
 Triangle.prototype.constructor = Triangle;
 Triangle.prototype.getPerimeter = function() {
 		return this.a + this.b + this.c;
@@ -39,9 +39,13 @@ Triangle.prototype.getPerimeter = function() {
 
 var t = new Triangle(1, 2, 3);
 console.log(t.constructor === Triangle);
-console.log(shape.isPrototypeOf(t));
+console.log(shape.prototype.isPrototypeOf(t));
 console.log(t.getPerimeter());
-//console.log(t.getType());
+for (var key in t) {
+	if (t.hasOwnProperty(key)) {
+		console.log(key);
+	}
+}
 
 
 

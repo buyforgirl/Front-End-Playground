@@ -11,3 +11,12 @@
 // Write a function that sets a specific timer (with SetTimeout) to insert a new message into your html. Then, the function is called whenever a button in your html is clicked.
 // Timers created using setInterval() ensure regular injection of timer code into the queue. As such, write another function to use setInterval() 
 // instead and repeat the same as above, except this time a user only needs to click once.
+
+function timer(callback, interval, message, id) {
+	var write = function(message, id) {
+		Document.getElementById(id).innerHTML = message;
+	}
+	return callback(write, interval);
+}
+
+
