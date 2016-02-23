@@ -2,7 +2,7 @@ var app = angular.module('todoList', []);
 app.controller('myController', function ($scope) {
 	$scope.tasks = [];
 	$scope.addCheckBox = function() {
-		
+		$scope.tasks.push($scope.task);
 	};
 });
 
