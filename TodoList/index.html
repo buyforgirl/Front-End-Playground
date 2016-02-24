@@ -2,13 +2,22 @@
 <html>
   <head>
     <title>TodoList</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="index.js"></script>
   </head>
   <body ng-app="todoList" ng-controller="myController">
-  	<label>Todos-AngularJS</label><br>
-  	<input type="text" ng-model="tasks" placeholder="Type a todo and Hit Enter" /><br>
-  	<label>{{tasks.length}} remaining</label> <button>Clear Completed Todos</button><br>
-  	<input type="checkbox">Mark All Done<br>
-  	<script src="index.js"></script>
+    <section class="main">
+  	<h1>Todos-AngularJS</h1><br>
+  	<input type="text" class="inputData" ng-model="task" ng-keyup="add()" placeholder="Type a todo and Hit Enter" /><br>
+  	<label>{{remain()}} remaining</label> 
+    <button  class="reset"  ng-click="clearAll()">Clear Completed Todos</button><br>
+  	<input type="checkbox" ng-click="finishAll()">Mark All Done<br>
+    <div ng-repeat="t in tasks">
+      <div ng-hide="t.finish">
+          <input type="checkbox" ng-model="t.finish"  ng-checked="{{t.finish}}" /> {{t.text}}
+      </div>
+    </div>
+    <section>
   </body>
 </html>

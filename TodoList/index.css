@@ -1,0 +1,20 @@
+body {
+	font-family: cursive;
+	color: #bdb76b;
+	background-color: black;
+}
+
+.main {
+ 	width:  500px;
+ 	margin: auto;
+}
+
+.inputData {
+	height: 50px;
+	width: 100%;
+	font-size: 24px;
+}
+
+.reset {
+	float:right;
+}
