@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calcualtor</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="index.js"></script>
+</head>
+<body ng-app="myCalcualtor" ng-controller="calcualtor">
+	<section>
+		<div class="screen">
+			<input type="text" ng-model="result">
+		</div>
+		<div class="left">
+			<button ng-click="add('1')">1</button>
+			<button ng-click="add('2')">2</button>
+			<button ng-click="add('3')">3</button>
+			<button ng-click="add('4')">4</button>
+			<button ng-click="add('5')">5</button>
+			<button ng-click="add('6')">6</button>
+			<button ng-click="add('7')">7</button>
+			<button ng-click="add('8')">8</button>
+			<button ng-click="add('9')">9</button>
+			<button ng-click="add('0')">0</button>
+			<button ng-click="add('00')">00</button>
+			<button ng-click="add('.')">.</button>
+		</div>
+		<div class="right">
+			<button ng-click="add('+')">+</button>
+			<button ng-click="add('-')">-</button>
+			<button ng-click="add('*')">&times</button>
+			<button ng-click="add('/')">&divide</button>
+			<button ng-click="add('#')">C</button>
+			<button ng-click="add('=')">=</button>
+			<button ng-click="add('!')">&plusmn</button>
+		</div>
+
+	</section>
+</body>
+</html>
