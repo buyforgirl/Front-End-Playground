@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>aaa</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+{{ names }}
+<ul>
+  <li ng-repeat="x in names">
+    {{ names[0] }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('myCtrl', ['filterFilter', function(filterFilter) {
+    this.names = [
+        'Jani',
+        'Carl',
+        'Margareth',
+        'Hege',
+        'Joe',
+        'Gustav',
+        'Birgit',
+        'Mary',
+        'Kai'
+    ];
+    //this.filteredNames = filterFilter(this.names, 'i');
+}]);
+</script>
+
+<p>This example displays only the names containing the letter "i".</p>
+
+</body>
+</html>

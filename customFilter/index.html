@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>custom filter</title>
+	
+</head>
+<body ng-app="myApp" ng-controller="myController">
+	<h1>Original:</h1>
+	<ul>
+		<li ng-repeat="entry in array">
+			{{entry}}
+		</li>
+	</ul>
+	<h1>Ordinal Filter:</h1>
+	<ul>
+		<li ng-repeat="entry in filtedArray">
+			{{entry}}
+		</li>
+	</ul>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>

@@ -11,8 +11,6 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-
-
 	<link rel="stylesheet" href="index.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="index.js"></script>
@@ -21,58 +19,60 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-3">
-				<input class="form-control" type="text" ng-model="result">
+				<form novalidate>
+					<input class="form-control" type="text" ng-model="result" required my-directive>
+				</form>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-2 col-md-2">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<button class="btn btn-default" ng-click="add('7')">7</button>
-						<button class="btn btn-default" ng-click="add('8')">8</button>
-						<button class="btn btn-default" ng-click="add('9')">9</button>
+						<button class="btn btn-default btn-left" ng-click="add('7')">7</button>
+						<button class="btn btn-default btn-left" ng-click="add('8')">8</button>
+						<button class="btn btn-default btn-left" ng-click="add('9')">9</button>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<button class="btn btn-default" ng-click="add('4')">4</button>
-						<button class="btn btn-default" ng-click="add('5')">5</button>
-						<button class="btn btn-default" ng-click="add('6')">6</button>
+						<button class="btn btn-default btn-left" ng-click="add('4')">4</button>
+						<button class="btn btn-default btn-left" ng-click="add('5')">5</button>
+						<button class="btn btn-default btn-left" ng-click="add('6')">6</button>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<button class="btn btn-default" ng-click="add('1')">1</button>
-						<button class="btn btn-default" ng-click="add('2')">2</button>
-						<button class="btn btn-default" ng-click="add('3')">3</button>
+						<button class="btn btn-default btn-left" ng-click="add('1')">1</button>
+						<button class="btn btn-default btn-left" ng-click="add('2')">2</button>
+						<button class="btn btn-default btn-left" ng-click="add('3')">3</button>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<button class="btn btn-default" ng-click="add('0')">0</button>
-						<button class="btn btn-default" ng-click="add('00')">00</button>
-						<button class="btn btn-default" ng-click="add('.')">.</button>
+						<button class="btn btn-default btn-left" ng-click="add('0')">0</button>
+						<button class="btn btn-default btn-left" ng-click="add('00')">00</button>
+						<button class="btn btn-default btn-left" ng-click="add('.')">.</button>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<button class="btn btn-default" ng-click="add('!')">&plusmn</button>
-						<button class="btn btn-default" ng-click="add('#')">C</button>
+						<button class="btn btn-default btn-right" ng-click="add('!')">&plusmn</button>
+						<button class="btn btn-default btn-right" ng-click="add('#')">C</button>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<button class="btn btn-default" ng-click="add('-')">-</button>
-						<button class="btn btn-default" ng-click="add('*')">&times</button>
+						<button class="btn btn-default btn-right" ng-click="add('-')">-</button>
+						<button class="btn btn-default btn-right" ng-click="add('*')">&times</button>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<div class="row">
 							<div class="col-lg-2 col-md-2">
-								<button class="btn btn-default" ng-click="add('+')">+</button>
+								<button class="btn btn-default btn-plus" ng-click="add('+')">+</button>
 							</div>
 							<div class="col-lg-2 col-md-2">
 								<div class="row">
