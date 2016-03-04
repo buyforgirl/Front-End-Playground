@@ -4,12 +4,16 @@ function start() {
 	app.createServer(onRequest).listen(8888);
 
 	function onRequest(request, respond) {
-		respond.writeHead(200, {"Content-Type": "text/plain"});
-		var matrix = spiralMatrix(5);
-		for (var i = 0; i < matrix.length; i++) {
-			respond.write(matrix[i].join(',') + '\n');
-		}	
-		respond.end();
+		if (request.url === '/matrix') {
+			respond.writeHead(200, {"Content-Type": "text/plain"});
+			var matrix = spiralMatrix(5);
+			for (var i = 0; i < matrix.length; i++) {
+				respond.write(matrix[i].join(',') + '\n');
+			}	
+			respond.end();
+		} else {
+			respond.end();
+		}
 	}
 
 	function spiralMatrix(n) {
