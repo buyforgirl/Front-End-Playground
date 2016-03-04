@@ -1,13 +1,11 @@
 var app = require('http');
 
-function start(route) {
+function start(route, handle) {
 	function onRequest(request, respond) {
 		var pathname = request.url;
-		var matrix = route(pathname);
-		respond.writeHead(200, {"Content-Type": "text/plain"});
-		for (var i = 0; i < matrix.length; i++) {
-			respond.write(matrix[i].join(',') + '\n');
-		}	 
+		var content = route(pathname, handle);
+		respond.writeHead(200, {"Content-Type": "text/html"});
+	 	respond.write(content);
 		respond.end();
 	}
 
