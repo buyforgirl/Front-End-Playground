@@ -4,9 +4,11 @@ function start() {
 	app.createServer(onRequest).listen(8888);
 
 	function onRequest(request, respond) {
-		if (request.url === '/matrix') {
+		if (request.url.indexOf('/matrix/' !== -1)) {
 			respond.writeHead(200, {"Content-Type": "text/plain"});
-			var matrix = spiralMatrix(5);
+			var url = request.url.split('/');
+			var n = parseInt(url[url.length - 1]);
+			var matrix = spiralMatrix(n);
 			for (var i = 0; i < matrix.length; i++) {
 				respond.write(matrix[i].join(',') + '\n');
 			}	
