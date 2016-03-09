@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HW1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-route.min.js"></script>
+	<script src="javascripts/myApp.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<form ng-submit="submit()">
+		Matrix Number: <input type="text" ng-model="matrixNum" name="matrix" /> 
+		<input type="submit" value="Submit" />
+	</form>
+	<div ng-view>
+	</div>
+</body>
+</html>
