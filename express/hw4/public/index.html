@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User List</title>
+<meta charset="UTF-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body ng-app="myApp" ng-controller="userCtrl">
+
+<div class="w3-container">
+<div>
+  <h3>Users</h3>
+  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#userList"><i class="fa fa-home"></i> User List</a></li>
+        <li><a href="#newUser"><i class="fa fa-shield"></i> New User</a></li>
+        <li><a href="#editUser"><i class="fa fa-comment"></i> Edit User</a></li>
+  </ul>
+</div>
+<hr>
+<div ng-view></div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+
+<script src= "./javascripts/users.js"></script>
+<script src="./javascripts/lib/dirPagination.js"></script>
+<script src="./javascripts/controller/editController.js"></script>
+<script src="./javascripts/controller/newController.js"></script>
+<script src="./javascripts/controller/userController.js"></script>
+
+<script src="./javascripts/services/users.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<div>
+<p><strong>Search</strong> <input type="text" ng-model="search"/></p>
+<table class="w3-table w3-bordered w3-striped">
+  <tr>
+    <th>Edit</th>
+    <th ng-click="orderBy('fName')">First Name</th>
+    <th ng-click="orderBy('lName')">Last Name</th>
+    <th>Title</th>
+    <th>Sex</th>
+    <th>Age</th>
+    <th></th>
+  </tr>
+  <tr dir-paginate="user in users | orderBy:order | filter:search | itemsPerPage:5">
+    <td>
+      <button class="w3-btn w3-ripple" ng-click="toEdit($index)">&#9998; Edit</button>
+    </td>
+    <td>{{ user.fName }}</td>
+    <td>{{ user.lName }}</td>
+    <td>{{ user.title}}</td>
+    <td>{{ user.sex }}</td>
+    <td>{{ user.age }}</td>
+    <td>
+    <i class="fa fa-trash" ng-click="delete($index)"></i>
+    </td>
+  </tr>
+
+</table>
+<dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" >    
+</dir-pagination-controls>
+</div>
