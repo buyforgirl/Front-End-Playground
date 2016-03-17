@@ -1,5 +1,5 @@
 angular.module('myApp')
-.controller('userCtrl', function($scope, $location, User) {
+.controller('userCtrl', function($scope, $http, $location, User) {
   $scope.fName = '';
   $scope.lName = '';
   $scope.passw1 = '';
@@ -7,7 +7,8 @@ angular.module('myApp')
   $scope.title = '';
   $scope.sex = '';
   $scope.age;
-  $scope.users = User.users;
+  $scope.users = [];
+  User.getUsers($http, $scope);
 
   $scope.toEdit = function(id) {
     $location.path('/editUser/' + id);
