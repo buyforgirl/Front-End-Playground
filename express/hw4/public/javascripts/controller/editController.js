@@ -1,7 +1,5 @@
 angular.module('myApp')
 .controller('editCtrl', function($scope, $routeParams, User) {
-
-  //$scope.users = User.users;
   $scope.edit = true;
   $scope.error = true;
   $scope.incomplete = false; 
