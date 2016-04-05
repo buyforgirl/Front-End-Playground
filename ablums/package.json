@@ -1,0 +1,14 @@
+{
+  "name": "hiring-nodejs-lei-wang",
+  "version": "1.0.0",
+  "description": "a simple NodeJS web server/client application that display a list of music albums",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lei Wang",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
