@@ -3,6 +3,7 @@ var app = express();
 var fs = require("fs");
 var albums = fs.readFileSync('sample-data.json');
 
+app.use(express.static('public'));
 
 app.get('/api/albums', function(req, res) {
 	res.json(JSON.parse(albums));
